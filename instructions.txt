@@ -33,13 +33,16 @@ npm run test
 
 Troubleshooting:
 
-if jest is running tests that are deleted, clear cache by changing in package.json:
+-- if jest is running tests that are deleted, clear cache by changing in package.json:
 "test:clear": "jest --clearCache"
 
-test files will need to have this header:
+-- test files will need to have this header:
 /**
  * @jest-environment jsdom
  */
+ 
+-- to get rid of typescript error saying that 'svelte' file is not a module, add this to tsconfig.json include array:
+"include": ["src/**/*", "node_modules/my-component/src/**/*"]
 
 ////////////////////////////////////////////
 Example test:
