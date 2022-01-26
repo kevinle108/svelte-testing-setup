@@ -15,6 +15,7 @@ module.exports = {
     '<rootDir>/.svelte-kit/build/runtime/app$1'
   ]
   },
+  "testEnvironment": "jsdom",
   setupFilesAfterEnv: ['<rootDir>/jest-setup.ts'],
   collectCoverageFrom: ["src/**/*.{ts,tsx,svelte,js,jsx}"]
 };
